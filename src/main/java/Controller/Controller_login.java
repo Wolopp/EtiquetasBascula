@@ -56,7 +56,7 @@ public class Controller_login extends HttpServlet {
 			if(res == 1) {
 			 
 				request.getSession().setAttribute("usuario",usuario);
-				 request.getRequestDispatcher("process.jsp").forward(request, response);	
+				 request.getRequestDispatcher("Principal.jsp").forward(request, response);	
 				}
 			else 
 			{

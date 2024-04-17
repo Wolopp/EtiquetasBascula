@@ -24,7 +24,7 @@ public class Registro {
 				
 				ps= con.prepareStatement(sql);
 				ps.setString(1, usr.getNombre());
-				ps.setString(6, usr.getContraseña());
+				ps.setString(2, usr.getContraseña());
 				ps.execute();
 				return true;
 				

@@ -21,31 +21,7 @@ public class Controller_Registro extends HttpServlet {
 			throws ServletException, IOException, ClassNotFoundException{
 		response.setContentType("text/html;chartset=UTF-8");
   
-		Registro dao = new Registro();
-		Usuarios mod = new Usuarios();
 		
-		
-		String nombre = request.getParameter("Nombre");
-		String sexo = request.getParameter("Sexo");
-		Double estatura = Double.parseDouble(request.getParameter("Estatura"));
-		int edad = Integer.parseInt(request.getParameter("Edad"));
-		String nombre_us = request.getParameter("Nombre_usuario");
-		String contraseña = request.getParameter("contraseña");
-		
-		mod.setNombre(nombre);
-		mod.setSexo(sexo);
-		mod.setEstatura(estatura);
-		mod.setEdad(edad);
-		mod.setNombre_de_usuario(nombre_us);
-		mod.setContraseña(contraseña);
-		
-		if(dao.resgistro(mod)) {
-			
-			request.getRequestDispatcher("Login.jsp").forward(request, response);
-		}
-		else {
-			request.getRequestDispatcher("Registro_usuario.jsp").forward(request, response);
-		}
 		
     
 	}
@@ -56,8 +32,26 @@ public class Controller_Registro extends HttpServlet {
 
 	 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 try {
-			processRequest(request, response);
+		
+		
+		Registro re = new Registro();
+		Usuarios user = new Usuarios();
+		
+		
+		String nombre = request.getParameter("Nombre");
+		String contraseña = request.getParameter("Contraseña");
+		
+		user.setNombre(nombre);
+		user.setContraseña(contraseña);
+		
+		try {
+			if(re.resgistro(user)) {
+				
+				request.getRequestDispatcher("Login.jsp").forward(request, response);
+			}
+			else {
+				request.getRequestDispatcher("Registro_usuario.jsp").forward(request, response);
+			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -68,6 +62,7 @@ public class Controller_Registro extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	
 	}
 
 }
