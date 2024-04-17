@@ -4,42 +4,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<style type="text/css">
-	
-	.Principal_RE
-	{
-	
-		heigth: 50vh;
-		margin:5%;
-		
-		display:flex;
-		flex-direction: column;
-		justify-content:center;
-		align-items: center;
-	}
-	
-	</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="Estilos.css">
 
-<meta charset="UTF-8">
+
 <title>Registro usuarios</title>
 </head>
 <body>
 
 	<div class="Principal_RE">
-		<form action="Controller_Registro" method="post">
+		<form action="Controller_Registro" class="Formulario_Registro" method="post">
 		<p>Ingrese su nombre</p>
 		<input type="text" name="Nombre"><br>
-		<p>Ingrese su sexo M o F</p>
-		<input type="text" name="Sexo" ><br>
-		<p>Ingrese su estatura</p>
-		<input type="text" name="Estatura"><br>
-		<p>Ingrese su edad</p>
-		<input type="number" name="Edad" min="16"><br>
-		<p>Ingrese su nombre de usuario</p>
-		<input type="text" name="Nombre_usuario"><br>
-		<p>Ingrese su contraseña</p>
-		<input type="password" name="contraseña"><br>
+		<p>Ingrese su Contraseña</p>
+		<input type="password" name="Contraseña">
+		<br>
+		<br>
 		<input type="submit" value="Enter">
+		<br>
+		<br>
 		<input type="reset">
 		</form>
 
