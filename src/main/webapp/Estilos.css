@@ -1,0 +1,68 @@
+
+body 
+{
+	margin: 0px;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background: #95dceb;
+	height: 100vh; 
+}
+
+.Contenedor_p 
+{
+	 position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 80px;
+	  margin: auto;
+	  width: 30%;
+	  height: 25%;
+	  text-align: center;
+	
+}
+
+.Formulario_Inicio 
+{
+	 
+	padding: 20px;
+	bottom: 35px;
+	justify-content: center;
+	text-align: center;
+	background: white;
+	width: 95%;
+	height: 100%;
+}
+
+
+.boton
+{
+	font-size: 17px; 
+  	padding: 5px 10px; 
+  	width: 100px; 
+}
+
+.Principal_RE
+{
+	position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 80px;
+	  margin: auto;
+	  width: 30%;
+	  height: 28%;
+	  text-align: center;
+	
+}
+
+.Formulario_Registro
+{
+	padding: 20px;
+	bottom: 35px;
+	justify-content: center;
+	text-align: center;
+	background: white;
+	width: 95%;
+	height: 100%;
+}
