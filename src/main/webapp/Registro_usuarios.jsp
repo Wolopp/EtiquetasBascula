@@ -25,7 +25,7 @@
 		<input type="submit" value="Enter">
 		<br>
 		<br>
-		<input type="reset">
+		<%-- input type="reset" value="Borrar"> --%>
 		</form>
 
 	</div>
