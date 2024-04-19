@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+   <%@page import="Controller.Controller_Principal" %> 
     
     
 <!DOCTYPE html>
@@ -19,8 +19,10 @@
 </head>
 <body>
  <div class="Principal_Process">
- 			<h1> Hola:  ${usuario}</h1>
-			<form action="Controller_imc" method="post">
+ 			<h1>Starkxz</h1>
+ 			<%-- <h1> Hola:  ${usuario}</h1> --%>
+ 			
+			<form action="Controller_Principal" method="post">
 				<div class="Form">
 					<p>Lote</p>
 					<input type="text" name="lote">
@@ -50,16 +52,21 @@
 					<p>Centro</p>
 					<input type="text" name="centro">
 				</div>
+				<br>
 	
 				<div class="Form">
 					<p>Peso Bruto</p>
 					<input type="text" name="pesobruto">
 				</div>
+				
+
 	
 				<div class="Form">	
 					<p>Peso Neto</p>
 					<input type="text" name="pesoneto">
 				</div>
+				
+				
 	
 				<div class="Form">	
 					<p>Cliente</p>
@@ -71,12 +78,21 @@
 					<input type="Datetime-local" name="fecha" >	
 				</div>
 	
+				
+				<div class="Form">	
+					<p>Orden de Venta</p>
+					<input type="text" name="orden_venta" class = "orden_venta">
+				</div>
+
 				<div class="Form">	
 					<p>Descripcion</p>
 					<input type="text" name="descripcion" class = "descripcion">
 				</div>
+				
 				<br>
-				<input type="submit" name ="action" value="Enter">
+				<br>
+				<input type="submit" name ="action" value="Guardar" class ="boton">
+				<input type="submit" name ="action" value="Impimir" class ="boton">
 		</form>
 	</div>
 </body>
