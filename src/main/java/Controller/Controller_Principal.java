@@ -63,7 +63,7 @@ public class Controller_Principal extends HttpServlet {
 		
 		String action=request.getParameter("action");
 		
-		if(action.equals("Guardar")) {
+		if(action != null && action.equals("Guardar")) {
 			
 			
 		
@@ -81,7 +81,6 @@ public class Controller_Principal extends HttpServlet {
 			Descripcion = request.getParameter("descripcion");
 			Orden_Venta = Integer.parseInt(request.getParameter("orden_venta"));
 			
-			
 			h.setOperario(Operario);
 			h.setLote(Lote);
 			h.setArticulo(Articulo);
@@ -96,24 +95,65 @@ public class Controller_Principal extends HttpServlet {
 			h.setDescripcion(Descripcion);
 			h.setOrden_Venta(Orden_Venta);
 			
+			}			
 			try {
 				if(eti.registroH(h))
 				{
 				
-					request.getRequestDispatcher("Principal.jsp").forward(request, response);	
+					request.getRequestDispatcher("Principal.jsp").forward(request, response);
+					return;
+					
 				}
 
-				else 
-				{
-					request.getRequestDispatcher("/Login.jsp").forward(request, response);			
-				}
+				
 			} 
 			catch (ClassNotFoundException | ServletException | IOException e) 
 			{
 				System.out.println(e);
 			}
 			
+			
+			
+			//Mostrar datos
+			
+			String Mostrar = request.getParameter("action");
+			
+			if(Mostrar != null && Mostrar.equals("Mostrar")) 
+			{
+			
+			    response.sendRedirect("Informacion.jsp");
+			    return;
+				
+			}
+			
+			
+			//Cerrar sesion
+			
+
+			String Cerrar = request.getParameter("cerrar");
+		
+			if(Cerrar != null && Cerrar.equals("Cerrar")) 
+			{
+			
+			    response.sendRedirect("Login.jsp");
+			    return;
+				
+			}
+			
+			//Regresar a login
+			
+			String R = request.getParameter("regresar");
+			
+			if(R != null && R.equals("Regresar")) 
+			{
+			
+			    response.sendRedirect("Principal.jsp");
+			    return;
+				
+			}
+			
 		}
+	
+	 
 
 	}
-}
