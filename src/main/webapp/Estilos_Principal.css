@@ -8,6 +8,15 @@ p{
 	font-weight: bold
 }
 
+
+.Cerrar_Sesion
+{		
+		border: 3px solid black;
+		/*position: fixed;
+        top: 10px; 
+        right: 100px;*/	
+}
+
 .Principal_Process
 {
 	border: 3px solid black;
@@ -43,10 +52,10 @@ input[type="datetime-local"]
 
 
 
-	.boton
-	{
+.boton
+{
 	
-	font-size: 1;
-  	padding: 10px 20px	
-	}
+font-size: 1;
+  padding: 10px 20px	
+}
 

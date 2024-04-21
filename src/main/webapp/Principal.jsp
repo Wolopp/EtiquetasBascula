@@ -33,6 +33,13 @@
 
 </head>
 <body>
+	<div class="Cerrar_Sesion">
+	<form action="Controller_Principal" method="post">
+       <input type="submit" name ="cerrar" value="Cerrar" class ="boton">
+       <input type="submit" name = "action" class = "boton" value="Mostrar">
+       </form>
+    </div>
+
  <div class="Principal_Process">
  			<h1>Starkxz</h1>
  			<%-- <h1> Hola:  ${usuario}</h1> --%>
@@ -112,12 +119,12 @@
 				<br>
 				<br>
 				<input type="submit" name ="action" value="Guardar" class ="boton">
-				<input type="button" name = " accion" class = "boton" value="Imprimir" onclick="window.print()">
+				<input type="button" name = "accion" class = "boton" value="Imprimir" onclick="window.print()">
+				
 		</form>
 		
 		<script>
-		
-		functi
+
 
 			function imprimir() 
 				{
