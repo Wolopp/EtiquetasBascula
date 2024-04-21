@@ -12,6 +12,21 @@
 	
 	<link rel="stylesheet" href="Estilos_Principal.css">
 	
+		<style>
+		
+			
+		
+		@media print
+		{
+    			.boton
+    			{
+    			
+        		display: none;
+    			}
+		}
+		</style>
+	
+	
 	
 <title>Etiquetas</title>
 
@@ -23,6 +38,11 @@
  			<%-- <h1> Hola:  ${usuario}</h1> --%>
  			
 			<form action="Controller_Principal" method="post">
+				<div class="Form">
+					<p>Operario</p>
+					<input type="text" name="operario">
+				</div>
+				
 				<div class="Form">
 					<p>Lote</p>
 					<input type="text" name="lote">
@@ -92,8 +112,22 @@
 				<br>
 				<br>
 				<input type="submit" name ="action" value="Guardar" class ="boton">
-				<input type="submit" name ="action" value="Impimir" class ="boton">
+				<input type="button" name = " accion" class = "boton" value="Imprimir" onclick="window.print()">
 		</form>
+		
+		<script>
+		
+		functi
+
+			function imprimir() 
+				{
+    				window.print(); 
+				}
+		</script>
+		
+		
 	</div>
+	
+	
 </body>
 </html>
